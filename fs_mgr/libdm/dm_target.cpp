@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,11 +14,16 @@
  * limitations under the License.
  */
 
-#ifndef _LIBSPARSE_SPARSE_CRC32_H_
-#define _LIBSPARSE_SPARSE_CRC32_H_
+#include <android-base/logging.h>
+#include <android-base/macros.h>
 
 #include <stdint.h>
 
-uint32_t sparse_crc32(uint32_t crc, const void* buf, size_t size);
+#include <string>
+#include <vector>
 
-#endif
+#include "dm_target.h"
+
+namespace android {
+namespace dm {}  // namespace dm
+}  // namespace android
